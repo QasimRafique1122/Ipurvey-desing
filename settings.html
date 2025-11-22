@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Ipurvey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/4d5fe89baa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <link rel="stylesheet" href="assets/Css/style.css"/>
+</head>
+<body>
+<div class="main-container ">
+    <div class="sidebar" id="side_nav">
+        <div class="header-box pt-3 pb-4 d-flex justify-content-between">
+            <img src="assets/Images/Logo.png" alt="Logo" class="img-fluid logo-img"/>
+            <button class="btn d-lg-none d-block close-btn px-1 py-0 text-dark">
+                <i class="fal fa-stream"></i>
+            </button>
+        </div>
+
+        <ul class="list-unstyled">
+            <li class="active">
+                <a href="Index.html" class="nav-side-link">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 3C0.75 1.75736 1.75736 0.75 3 0.75H5.25C6.49264 0.75 7.5 1.75736 7.5 3V5.25C7.5 6.49264 6.49264 7.5 5.25 7.5H3C1.75736 7.5 0.75 6.49264 0.75 5.25V3Z"
+                              stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M0.75 12.75C0.75 11.5074 1.75736 10.5 3 10.5H5.25C6.49264 10.5 7.5 11.5074 7.5 12.75V15C7.5 16.2426 6.49264 17.25 5.25 17.25H3C1.75736 17.25 0.75 16.2426 0.75 15V12.75Z"
+                              stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5 3C10.5 1.75736 11.5074 0.75 12.75 0.75H15C16.2426 0.75 17.25 1.75736 17.25 3V5.25C17.25 6.49264 16.2426 7.5 15 7.5H12.75C11.5074 7.5 10.5 6.49264 10.5 5.25V3Z"
+                              stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5 12.75C10.5 11.5074 11.5074 10.5 12.75 10.5H15C16.2426 10.5 17.25 11.5074 17.25 12.75V15C17.25 16.2426 16.2426 17.25 15 17.25H12.75C11.5074 17.25 10.5 16.2426 10.5 15V12.75Z"
+                              stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    Overview
+                </a>
+            </li>
+            <li>
+                <a href=" " class="nav-side-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.59377 3.94005C9.68418 3.39759 10.1535 3 10.7035 3H13.2974C13.8474 3 14.3167 3.39759 14.4071 3.94005L14.6206 5.2211C14.683 5.59514 14.9329 5.90671 15.2647 6.09036C15.3389 6.13142 15.4122 6.17383 15.4846 6.21757C15.8097 6.41384 16.205 6.47486 16.5606 6.34166L17.7774 5.88578C18.2924 5.69284 18.8714 5.90051 19.1464 6.37677L20.4434 8.62321C20.7183 9.09948 20.6087 9.70473 20.1841 10.0543L19.1798 10.8811C18.8873 11.1219 18.7423 11.4937 18.7493 11.8725C18.7501 11.9149 18.7504 11.9574 18.7504 12C18.7504 12.0426 18.7501 12.0851 18.7493 12.1275C18.7423 12.5063 18.8873 12.8781 19.1798 13.1189L20.1841 13.9457C20.6087 14.2953 20.7183 14.9005 20.4434 15.3768L19.1464 17.6232C18.8714 18.0995 18.2924 18.3071 17.7774 18.1142L16.5606 17.6583C16.205 17.5251 15.8097 17.5862 15.4847 17.7824C15.4122 17.8262 15.3389 17.8686 15.2647 17.9096C14.9329 18.0933 14.683 18.4049 14.6206 18.7789L14.4071 20.0599C14.3167 20.6024 13.8474 21 13.2974 21H10.7035C10.1535 21 9.68418 20.6024 9.59377 20.0599L9.38026 18.7789C9.31792 18.4049 9.06795 18.0933 8.73618 17.9096C8.66201 17.8686 8.58869 17.8262 8.51626 17.7824C8.19122 17.5862 7.79589 17.5251 7.44033 17.6583L6.22346 18.1142C5.70847 18.3072 5.12948 18.0995 4.8545 17.6232L3.55752 15.3768C3.28255 14.9005 3.3922 14.2953 3.81678 13.9457L4.82114 13.1189C5.11364 12.8781 5.25864 12.5063 5.25163 12.1275C5.25084 12.0851 5.25045 12.0426 5.25045 12C5.25045 11.9574 5.25084 11.9149 5.25163 11.8725C5.25864 11.4937 5.11364 11.1219 4.82114 10.8811L3.81678 10.0543C3.3922 9.70475 3.28255 9.09949 3.55752 8.62323L4.8545 6.37679C5.12948 5.90052 5.70847 5.69286 6.22346 5.88579L7.44031 6.34167C7.79588 6.47487 8.19121 6.41385 8.51624 6.21758C8.58868 6.17384 8.662 6.13142 8.73618 6.09036C9.06795 5.90671 9.31792 5.59514 9.38026 5.2211L9.59377 3.94005Z"
+                              stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.0002 11.9999C15.0002 13.6568 13.6571 14.9999 12.0002 14.9999C10.3434 14.9999 9.00022 13.6568 9.00022 11.9999C9.00022 10.3431 10.3434 8.99992 12.0002 8.99992C13.6571 8.99992 15.0002 10.3431 15.0002 11.9999Z"
+                              stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    Settings
+                </a>
+            </li>
+
+
+        </ul>
+
+        <div class=" list-unstyled-bootom">
+            <ul class="list-unstyled">
+                <li>
+                    <a href=" " class="nav-side-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M17.9815 18.7248C16.6121 16.9175 14.4424 15.75 12 15.75C9.55761 15.75 7.38789 16.9175 6.01846 18.7248M17.9815 18.7248C19.8335 17.0763 21 14.6744 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 14.6744 4.1665 17.0763 6.01846 18.7248M17.9815 18.7248C16.3915 20.1401 14.2962 21 12 21C9.70383 21 7.60851 20.1401 6.01846 18.7248M15 9.75C15 11.4069 13.6569 12.75 12 12.75C10.3431 12.75 9 11.4069 9 9.75C9 8.09315 10.3431 6.75 12 6.75C13.6569 6.75 15 8.09315 15 9.75Z"
+                                  stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        Support
+                    </a>
+                </li>
+                <li>
+                    <a href=" " class="nav-side-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.75 9V5.25C15.75 4.00736 14.7426 3 13.5 3L7.5 3C6.25736 3 5.25 4.00736 5.25 5.25L5.25 18.75C5.25 19.9926 6.25736 21 7.5 21H13.5C14.7426 21 15.75 19.9926 15.75 18.75V15M18.75 15L21.75 12M21.75 12L18.75 9M21.75 12L9 12"
+                                  stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+    <!-- ................................sidebar manue...................... -->
+
+    <!-- .................................content........................... -->
+
+    <div class="content ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <div class="header-navnbar">
+                    <button class="btn px-1 py-0 me-16 open-btn">
+                        <i class="fal fa-stream"></i>
+                    </button>
+
+                    <img src="assets/Images/profile.png" alt="profile">
+                    <h1 class="profile-name">John Adam</h1>
+                </div>
+
+
+            </div>
+        </nav>
+        <div class="container p-16">
+            <div class="dashboard-content  ">
+                <h3 class="welcome-heading">Core System Configuration</h3>
+                <div class="row pt-16">
+                    <!-- Sidebar -->
+                    <div class="col-md-3">
+                        <div class="card p-16">
+                            <p class="pb-16">Menu</p>
+                            <ul class="nav flex-column nav-pills profile-settings-nav" id="settingsTabs" role="tablist">
+                                <li class="nav-item mb-1">
+                                    <button class="nav-link active w-100" data-bs-toggle="tab"
+                                            data-bs-target="#profile">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             viewBox="0 0 16 16" fill="none">
+                                            <path d="M10.5002 4C10.5002 5.38071 9.38093 6.5 8.00022 6.5C6.61951 6.5 5.50022 5.38071 5.50022 4C5.50022 2.61929 6.61951 1.5 8.00022 1.5C9.38093 1.5 10.5002 2.61929 10.5002 4Z"
+                                                  stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M3.00098 13.4122C3.04785 10.6913 5.26813 8.5 8.00022 8.5C10.7324 8.5 12.9527 10.6914 12.9995 13.4124C11.4776 14.1107 9.78448 14.5 8.00043 14.5C6.21622 14.5 4.52295 14.1106 3.00098 13.4122Z"
+                                                  stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                        Profile Management
+                                    </button>
+                                </li>
+                                <li class="nav-item mb-1">
+                                    <button class="nav-link w-100" data-bs-toggle="tab" data-bs-target="#security">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             viewBox="0 0 16 16" fill="none">
+                                            <path d="M11 7V4.5C11 2.84315 9.65685 1.5 8 1.5C6.34315 1.5 5 2.84315 5 4.5V7M4.5 14.5H11.5C12.3284 14.5 13 13.8284 13 13V8.5C13 7.67157 12.3284 7 11.5 7H4.5C3.67157 7 3 7.67157 3 8.5V13C3 13.8284 3.67157 14.5 4.5 14.5Z"
+                                                  stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                        Security
+                                    </button>
+                                </li>
+                                <li class="nav-item mb-1">
+                                    <button class="nav-link w-100" data-bs-toggle="tab" data-bs-target="#system">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             viewBox="0 0 16 16" fill="none">
+                                            <path d="M6 8.49982L7.5 9.99982L10 6.49982M8 1.80933C6.56634 3.16708 4.63042 3.99983 2.5 3.99983C2.46615 3.99983 2.43235 3.99962 2.3986 3.9992C2.13993 4.78594 2 5.62655 2 6.49986C2 10.2275 4.54955 13.3597 8 14.2478C11.4505 13.3597 14 10.2275 14 6.49986C14 5.62655 13.8601 4.78594 13.6014 3.9992C13.5677 3.99962 13.5339 3.99983 13.5 3.99983C11.3696 3.99983 9.43366 3.16708 8 1.80933Z"
+                                                  stroke="#4A4A4A" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                        System Settings
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-md-9">
+                        <div class="tab-content">
+
+                            <!-- 1. Profile Tab -->
+                            <div class="tab-pane fade show active" id="profile">
+
+                                <div class="card user-setting-card p-4 shadow-sm">
+                                    <h5 class="fw-bold">User Profile and Identity</h5>
+                                    <hr>
+
+                                    <div class="d-flex border-bottom pb-16 align-items-center mb-4">
+                                        <img src="https://i.pravatar.cc/100" class="rounded-circle me-3" width="80">
+                                        <div class="upload-area">
+                                            <h3 class="heading-2">Avatar & Photo</h3>
+                                            <p class="upload-name">Upload a new photo or manage your initials.</p>
+                                            <button class="btn btn-primary btn-sm me-2">Upload Photo</button>
+                                            <button class="btn btn-outline-secondary btn-sm">Remove Photo</button>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="heading-2 pb-16 ">Personal Details</h3>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Full Name</label>
+                                            <input class="form-control" value="Alex Johnson">
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Job Title</label>
+                                            <input class="form-control" value="Financial Admin">
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Email Address (Read-only)</label>
+                                            <input class="form-control" readonly value="alex.johnson@ipurvey.com">
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Timezone</label>
+                                            <input class="form-control" value="Greenwich Mean Time (GMT)">
+                                        </div>
+
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label">Bio / Short Description</label>
+                                            <textarea class="form-control" rows="3">  Manages Q4 financial reconciliation and internal partner compliance audits.
+                                </textarea>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-primary px-4">Save Profile Changes</button>
+                                </div>
+
+                            </div>
+
+                            <!-- 2. Security Tab -->
+                            <div class="tab-pane fade" id="security">
+                                <div class="card Security-Settings p-4 shadow-sm">
+                                    <h5 class="fw-bold">Security Settings</h5>
+                                    <hr>
+
+                                    <!-- OLD PASSWORD -->
+                                    <label class="form-label">Old Password</label>
+                                    <div class="mb-3 position-relative">
+                                        <input type="password" class="form-control password-field" id="oldPass">
+                                        <span class="toggle-password" data-target="oldPass">
+                                            <i class="bi bi-eye-slash"></i>
+                                        </span>
+                                    </div>
+
+                                    <!-- NEW PASSWORD -->
+
+
+                                    <label class="form-label">New Password</label>
+                                    <div class="mb-3 position-relative">
+                                        <input type="password" class="form-control password-field" id="newPass">
+                                        <span class="toggle-password" data-target="newPass">
+                                            <i class="bi bi-eye-slash"></i>
+                                        </span>
+                                    </div>
+                                    <small class="text-muted d-block mt-1">
+                                        Password must be:
+                                        <br>Minimum 12 characters
+                                        <br>One uppercase, one lowercase
+                                        <br>One number, one special character
+                                    </small>
+
+
+                                    <!-- CONFIRM PASSWORD -->
+                                    <label class="form-label">Confirm New Password</label>
+                                    <div class="mb-3 position-relative">
+                                        <input type="password" class="form-control password-field" id="confirmPass">
+                                        <span class="toggle-password" data-target="confirmPass">
+                                            <i class="bi bi-eye-slash"></i>
+                                         </span>
+                                    </div>
+
+                                    <button class="btn btn-primary">Change Password</button>
+                                </div>
+                            </div>
+
+                            <!-- 3. System Settings Tab -->
+                            <div class="tab-pane fade" id="system">
+
+                                <div class="row g-3">
+                                    <!-- Security & Access -->
+                                    <div class="col-md-6">
+                                        <div class="card p-3 shadow-sm">
+                                            <h6 class="fw-bold">Security & Access Management</h6>
+
+                                            <div class="mt-3 small">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="">
+                                                        <p class="mb-1">Multi-Factor Authentication (MFA)</p>
+                                                        <a href="#" class="text-secondary text-decoration-none small">Enabled for all Admins</a>
+                                                    </div>
+
+                                                    <a href="" class="text-primary text-decoration-none small">Manage
+                                                        Exemptions</a>
+
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="">
+                                                        <p class="mb-1">Password Policy Enforcement</p>
+                                                        <a href="#" class="text-secondary text-decoration-none small">Strong (12 char, complex)</a>
+                                                    </div>
+                                                    <a href="" class="text-primary text-decoration-none small">Manage
+                                                        Exemptions</a>
+                                                </div>
+
+                                                <hr>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="">
+                                                        <p class="mb-1">Geo-Fencing Access Restrictions</p>
+                                                        <a href="#" class="text-secondary text-decoration-none small">Enabled (US, EU only)</a>
+                                                    </div>
+                                                    <a href="" class="text-primary text-decoration-none small">Manage
+                                                        Exemptions</a>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="">
+                                                        <p class="mb-1">Emergency Lockdown Mode</p>
+                                                        <a href="#" class="text-secondary text-decoration-none small">Inactive</a>
+                                                    </div>
+                                                    <a href="" class="text-primary text-decoration-none small">Manage
+                                                        Exemptions</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- API Settings -->
+                                    <div class="col-md-6">
+                                        <div class="card p-3 shadow-sm">
+                                            <h6 class="fw-bold">API & Integration Management</h6>
+
+                                            <div class="mt-3 small">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="">
+                                                        <p class="mb-1">Production API Key Status</p>
+                                                        <a href="#" class="text-secondary text-decoration-none small">Active / 4 Keys Used</a>
+                                                    </div>
+                                                    <a href="" class="text-primary text-decoration-none small">Manage
+                                                        Exemptions</a>
+                                                </div>
+                                                <hr>
+
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="">
+                                                        <p class="mb-1">Webhook Failure Alerts</p>
+                                                        <a href="#" class="text-secondary text-decoration-none small">Enabled (Alerts to Slack)</a>
+                                                    </div>
+                                                    <a href="" class="text-primary text-decoration-none small">Manage
+                                                        Exemptions</a>
+                                                </div>
+                                                <hr>
+
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="">
+                                                        <p class="mb-1">Partner Rate Limiting</p>
+                                                        <a href="#" class="text-secondary text-decoration-none small">2000 RPM (default policy)</a>
+                                                    </div>
+                                                    <a href="" class="text-primary text-decoration-none small">Manage
+                                                        Exemptions</a>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="">
+                                                        <p class="mb-1">Data Encryption Standard</p>
+                                                        <a href="#" class="text-secondary text-decoration-none small">AES-256 (Compliance: PCI DSS)</a>
+                                                    </div>
+                                                    <a href="" class="text-primary text-decoration-none small">Manage
+                                                        Exemptions</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit -->
+                                    <div class="col-md-12">
+                                        <div class="card p-3 shadow-sm">
+                                            <h6 class="fw-bold">Audit & System Configuration</h6>
+                                            <p class="small mb-1">Manage logging levels and retention policies for compliance purposes.</p>
+                                            <div class="Policy-card mt-16">
+                                                <div class="row ">
+                                                    <div class="col">
+                                                        <span>Audit Log Retention Policy:</span>
+                                                    </div>
+                                                    <div class="col"> <p>5 Years</p></div>
+                                                    <div class="col"> <p>Modify Policy</p></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <!-- .................................content end........................... -->
+
+    <!-- .................................leftsidebar........................... -->
+
+
+</div>
+<!-- .................................leftsidebar end ........................... -->
+
+<script>
+    document.querySelectorAll('.toggle-password').forEach(icon => {
+        icon.addEventListener('click', function () {
+            const target = document.getElementById(this.getAttribute('data-target'));
+
+            if (target.type === 'password') {
+                target.type = 'text';
+                this.innerHTML = '<i class="bi bi-eye"></i>';
+            } else {
+                target.type = 'password';
+                this.innerHTML = '<i class="bi bi-eye-slash"></i>';
+            }
+        });
+    });
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"
+></script>
+<!-- <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+  crossorigin="anonymous"
+></script> -->
+</body>
+</html>
