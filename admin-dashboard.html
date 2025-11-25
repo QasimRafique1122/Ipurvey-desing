@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Ipurvey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/4d5fe89baa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <link rel="stylesheet" href="assets/Css/style.css"/>
+</head>
+<body>
+<div class="main-container ">
+    <div class="sidebar" id="side_nav">
+        <div class="header-box pt-3 pb-4 d-flex justify-content-between">
+            <img src="assets/Images/Logo.png" alt="Logo" class="img-fluid logo-img"/>
+            <button class="btn d-lg-none d-block close-btn px-1 py-0 text-dark">
+                <i class="fal fa-stream"></i>
+            </button>
+        </div>
+
+        <ul class="list-unstyled">
+            <li class="active">
+                <a href="Index.html" class="nav-side-link">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 3C0.75 1.75736 1.75736 0.75 3 0.75H5.25C6.49264 0.75 7.5 1.75736 7.5 3V5.25C7.5 6.49264 6.49264 7.5 5.25 7.5H3C1.75736 7.5 0.75 6.49264 0.75 5.25V3Z"
+                              stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M0.75 12.75C0.75 11.5074 1.75736 10.5 3 10.5H5.25C6.49264 10.5 7.5 11.5074 7.5 12.75V15C7.5 16.2426 6.49264 17.25 5.25 17.25H3C1.75736 17.25 0.75 16.2426 0.75 15V12.75Z"
+                              stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5 3C10.5 1.75736 11.5074 0.75 12.75 0.75H15C16.2426 0.75 17.25 1.75736 17.25 3V5.25C17.25 6.49264 16.2426 7.5 15 7.5H12.75C11.5074 7.5 10.5 6.49264 10.5 5.25V3Z"
+                              stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5 12.75C10.5 11.5074 11.5074 10.5 12.75 10.5H15C16.2426 10.5 17.25 11.5074 17.25 12.75V15C17.25 16.2426 16.2426 17.25 15 17.25H12.75C11.5074 17.25 10.5 16.2426 10.5 15V12.75Z"
+                              stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    Overview
+                </a>
+            </li>
+            <li>
+                <a href="Shipments.html" class="nav-side-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.59377 3.94005C9.68418 3.39759 10.1535 3 10.7035 3H13.2974C13.8474 3 14.3167 3.39759 14.4071 3.94005L14.6206 5.2211C14.683 5.59514 14.9329 5.90671 15.2647 6.09036C15.3389 6.13142 15.4122 6.17383 15.4846 6.21757C15.8097 6.41384 16.205 6.47486 16.5606 6.34166L17.7774 5.88578C18.2924 5.69284 18.8714 5.90051 19.1464 6.37677L20.4434 8.62321C20.7183 9.09948 20.6087 9.70473 20.1841 10.0543L19.1798 10.8811C18.8873 11.1219 18.7423 11.4937 18.7493 11.8725C18.7501 11.9149 18.7504 11.9574 18.7504 12C18.7504 12.0426 18.7501 12.0851 18.7493 12.1275C18.7423 12.5063 18.8873 12.8781 19.1798 13.1189L20.1841 13.9457C20.6087 14.2953 20.7183 14.9005 20.4434 15.3768L19.1464 17.6232C18.8714 18.0995 18.2924 18.3071 17.7774 18.1142L16.5606 17.6583C16.205 17.5251 15.8097 17.5862 15.4847 17.7824C15.4122 17.8262 15.3389 17.8686 15.2647 17.9096C14.9329 18.0933 14.683 18.4049 14.6206 18.7789L14.4071 20.0599C14.3167 20.6024 13.8474 21 13.2974 21H10.7035C10.1535 21 9.68418 20.6024 9.59377 20.0599L9.38026 18.7789C9.31792 18.4049 9.06795 18.0933 8.73618 17.9096C8.66201 17.8686 8.58869 17.8262 8.51626 17.7824C8.19122 17.5862 7.79589 17.5251 7.44033 17.6583L6.22346 18.1142C5.70847 18.3072 5.12948 18.0995 4.8545 17.6232L3.55752 15.3768C3.28255 14.9005 3.3922 14.2953 3.81678 13.9457L4.82114 13.1189C5.11364 12.8781 5.25864 12.5063 5.25163 12.1275C5.25084 12.0851 5.25045 12.0426 5.25045 12C5.25045 11.9574 5.25084 11.9149 5.25163 11.8725C5.25864 11.4937 5.11364 11.1219 4.82114 10.8811L3.81678 10.0543C3.3922 9.70475 3.28255 9.09949 3.55752 8.62323L4.8545 6.37679C5.12948 5.90052 5.70847 5.69286 6.22346 5.88579L7.44031 6.34167C7.79588 6.47487 8.19121 6.41385 8.51624 6.21758C8.58868 6.17384 8.662 6.13142 8.73618 6.09036C9.06795 5.90671 9.31792 5.59514 9.38026 5.2211L9.59377 3.94005Z"
+                              stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.0002 11.9999C15.0002 13.6568 13.6571 14.9999 12.0002 14.9999C10.3434 14.9999 9.00022 13.6568 9.00022 11.9999C9.00022 10.3431 10.3434 8.99992 12.0002 8.99992C13.6571 8.99992 15.0002 10.3431 15.0002 11.9999Z"
+                              stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    Settings
+                </a>
+            </li>
+
+
+
+        </ul>
+
+        <div class=" list-unstyled-bootom">
+            <ul class="list-unstyled">
+                <li>
+                    <a href=" " class="nav-side-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M17.9815 18.7248C16.6121 16.9175 14.4424 15.75 12 15.75C9.55761 15.75 7.38789 16.9175 6.01846 18.7248M17.9815 18.7248C19.8335 17.0763 21 14.6744 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 14.6744 4.1665 17.0763 6.01846 18.7248M17.9815 18.7248C16.3915 20.1401 14.2962 21 12 21C9.70383 21 7.60851 20.1401 6.01846 18.7248M15 9.75C15 11.4069 13.6569 12.75 12 12.75C10.3431 12.75 9 11.4069 9 9.75C9 8.09315 10.3431 6.75 12 6.75C13.6569 6.75 15 8.09315 15 9.75Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        Support
+                    </a>
+                </li>
+                <li>
+                    <a href="Shipments.html" class="nav-side-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.75 9V5.25C15.75 4.00736 14.7426 3 13.5 3L7.5 3C6.25736 3 5.25 4.00736 5.25 5.25L5.25 18.75C5.25 19.9926 6.25736 21 7.5 21H13.5C14.7426 21 15.75 19.9926 15.75 18.75V15M18.75 15L21.75 12M21.75 12L18.75 9M21.75 12L9 12" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+    <!-- ................................sidebar manue...................... -->
+
+    <!-- .................................content........................... -->
+
+    <div class="content admin-dashbord">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <div class="header-navnbar">
+                    <button class="btn px-1 py-0 me-16 open-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <img src="assets/Images/profile.png" alt="profile">
+                    <h1 class="profile-name">John Adam</h1>
+                </div>
+
+
+                <!-- ...............rigth side icon button. -->
+
+            </div>
+        </nav>
+        <div class="container p-16">
+            <div class="dashboard-content  ">
+                <h3 class="welcome-heading">Admin Overview</h3>
+
+                <!-- STATS ROW -->
+                <div class="row  pt-3 g-3">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card bg-Container ">
+                            <div class="d-flex justify-content-between">
+                                <h4>148</h4>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+                                    <path d="M28.3333 34.3333H36.6667V29.3333M23.3333 24.3333L19 20C16.5 20.6667 15.6667 21 15 21C9.5 21 5 16.5 5 11C5 5.5 9.5 1 15 1C20.5 1 25 5.5 25 11C25 11.6667 24.6667 12.3333 24.1667 12.8333L25 14.3333L30 19.3333H36.6667V24.3333H23.3333Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            </div>
+                            <p>
+                                Active Partners
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card bg-Payouts">
+                            <div class="d-flex justify-content-between">
+                                <h4>3,121</h4>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M20.0001 15.0001V18.3334M20.0001 25.0001H20.0168M8.45347 31.6667H31.5468C34.1135 31.6667 35.7168 28.8884 34.4335 26.6667L22.8868 6.66674C21.6035 4.44507 18.3968 4.44507 17.1135 6.66674L5.50013 26.6667C4.2168 28.8884 5.82013 31.6667 8.3868 31.6667H8.45347Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            </div>
+                            <p>Open Variances
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card  bg-Variance">
+                            <div class="d-flex justify-content-between">
+                                <h4>42</h4>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M11.6668 13.3333H28.3335M11.6668 20H28.3335M11.6668 26.6667H28.3335M6.66683 10H33.3335C34.2176 10 35.0654 10.3512 35.6905 10.9763C36.3156 11.6014 36.6668 12.4493 36.6668 13.3333V26.6667C36.6668 27.5507 36.3156 28.3986 35.6905 29.0237C35.0654 29.6488 34.2176 30 33.3335 30H6.66683C5.78277 30 4.93493 29.6488 4.30981 29.0237C3.68469 28.3986 3.3335 27.5507 3.3335 26.6667V13.3333C3.3335 12.4493 3.68469 11.6014 4.30981 10.9763C4.93493 10.3512 5.78277 10 6.66683 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                            </div>
+                            <p> DLQ Messages </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card bg-Revenue">
+                            <div class="d-flex justify-content-between">
+                                <h4>98.5%</h4>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M15.0001 20.0001L18.3335 23.3334L25.0001 16.6667M34.3635 9.97341C29.0936 10.2533 23.928 8.43109 20.0001 4.90674C14.7801 4.90674 9.93012 6.76674 6.32846 9.8134C5.34012 10.7551 4.79346 11.8967 4.79346 13.0734C4.79346 15.1217 5.83679 16.9101 7.69346 18.1801C9.55012 19.4501 11.6568 20.0751 13.7918 20.0751C14.9068 20.0751 15.9735 19.8534 16.9851 19.4401M24.2935 17.9051C25.2818 16.9634 25.8285 15.8217 25.8285 14.6451C25.8285 12.5967 24.7851 10.8084 22.9285 9.5384C31.1118 11.0717 31.6668 12.3734 31.6668 13.7851V15.0001C31.6668 15.4421 31.4912 15.866 31.1786 16.1786C30.8661 16.4911 30.4422 16.6667 30.0001 16.6667H26.6668C26.2248 16.6667 25.8008 16.4911 25.4883 16.1786C25.1757 15.866 25.0001 15.4421 25.0001 15.0001V13.7851C25.0001 13.343 24.8245 12.9191 24.512 12.6066C24.1994 12.294 23.7755 12.1184 23.3335 12.1184H20.0001C19.5581 12.1184 19.1342 12.294 18.8216 12.6066C18.5091 12.9191 18.3335 13.343 18.3335 13.7851V15.0001C18.3335 15.4421 18.1579 15.866 17.8453 16.1786C17.5327 16.4911 17.1088 16.6667 16.6668 16.6667H11.6668C11.2248 16.6667 10.8008 16.4911 10.4883 16.1786C10.1757 15.866 10.0001 15.4421 10.0001 15.0001V13.7851C10.0001 11.9301 10.5218 10.1434 11.5351 8.87841" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p>
+                                SLA Compliance
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h4 class="mt-16">Work Request Summary</h4>
+                <div class="row  pt-3 g-3">
+                    <div class="col-md-4 ">
+                        <div class="Work-Request-card ">
+                            <div class="d-flex justify-content-between">
+                                <h2 class="heading-2">Product</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                                    <path d="M15 22.75L5.25 28L15 33.25M15 22.75L28 29.75L41 22.75M15 22.75L5.25 17.5L28 5.25L50.75 17.5L41 22.75M41 22.75L50.75 28L41 33.25M41 33.25L50.75 38.5L28 50.75L5.25 38.5L15 33.25M41 33.25L28 40.25L15 33.25" stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4>
+                                12
+                            </h4>
+
+                            <button class="btn-Product btn w-100">Click to view details <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4.5 19.5L19.5 4.5M19.5 4.5L8.25 4.5M19.5 4.5V15.75" stroke="#0083DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="Work-Request-card ">
+                            <div class="d-flex justify-content-between">
+                                <h2 class="heading-2">Boarding Pass Verification</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                                    <path d="M21 29.7497L26.25 34.9997L35 22.7497M28 6.33301C22.9822 11.0851 16.2065 13.9998 8.75 13.9998C8.63152 13.9998 8.51322 13.999 8.39509 13.9976C7.48976 16.7511 7 19.6933 7 22.7499C7 35.7967 15.9234 46.7594 28 49.8677C40.0766 46.7594 49 35.7967 49 22.7499C49 19.6933 48.5102 16.7511 47.6049 13.9976C47.4868 13.999 47.3685 13.9998 47.25 13.9998C39.7935 13.9998 33.0178 11.0851 28 6.33301Z" stroke="#3E8E7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4>
+                                12
+                            </h4>
+
+                            <button class="btn-Boarding btn w-100">Click to view details
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4.5 19.5L19.5 4.5M19.5 4.5L8.25 4.5M19.5 4.5V15.75" stroke="#3E8E7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="Work-Request-card ">
+                            <div class="d-flex justify-content-between">
+                                <h2 class="heading-2">Product Refund </h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                                    <path d="M28 14V42M21 35.4242L23.0507 36.9623C25.7843 39.0126 30.2163 39.0126 32.9498 36.9623C35.6834 34.9121 35.6834 31.5879 32.9498 29.5377C31.5829 28.5125 29.7913 27.9999 27.9997 28C26.3082 28.0001 24.6171 27.4876 23.3266 26.4624C20.7457 24.4121 20.7457 21.088 23.3266 19.0378C25.9074 16.9875 30.0919 16.9875 32.6728 19.0378L33.6409 19.8068M49 28C49 39.598 39.598 49 28 49C16.402 49 7 39.598 7 28C7 16.402 16.402 7 28 7C39.598 7 49 16.402 49 28Z" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4>
+                                12
+                            </h4>
+
+                            <button class="btn-Refund btn w-100">Click to view details <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4.5 19.5L19.5 4.5M19.5 4.5L8.25 4.5M19.5 4.5V15.75" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                </div>
+
+
+<!--  .................. work Request summary end.............. -->
+                <div class="row mt-16">
+                    <div class="col-md-7">
+                        <div class=" card-area ">
+                            <div class="  mb-16">
+                                <h4 class="heading-4">Partner Health Table</h4>
+
+                            </div>
+                            <div class="row g-3 ">
+                                <div class="col-md-4">
+                                    <label class="form-label">Date Range</label>
+                                    <input type="date" class="form-control" placeholder="09-11-2024 - 09-12-2024">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Partner</label>
+                                    <div class="position-relative">
+                                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#6c757d" stroke-width="2" viewBox="0 0 24 24">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        </svg>
+                                        <input class="form-control ps-5" placeholder="Search Partners">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Status</label>
+                                    <select class="form-select">
+                                        <option selected>Active</option>
+                                        <option>Inactive</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+                            <!-- TABLE -->
+                            <div class="table-wrapper mt-16 table-responsive">
+                                <table class="table  table-hover" id="finance-table" class="">
+                                    <thead class="table-light">
+                                    <tr>
+                                        <th>Partner</th>
+                                        <th>Report Lag</th>
+                                        <th>API Errors</th>
+                                        <th>Variances</th>
+                                        <th>Last Reconcile</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-fist-row">Acme Ins. Co.</td>
+                                        <td class="text-success">0 hours</td>
+                                        <td class="text-success">0.01%</td>
+                                        <td>0</td>
+                                        <td>2 min ago</td>
+                                        <td><button class="btn btn-boderless">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6ZM10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12ZM10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18Z" fill="#4A4A4A"/>
+                                            </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-fist-row">Acme Ins. Co.</td>
+                                        <td class="text-success">0 hours</td>
+                                        <td class="text-success">0.01%</td>
+                                        <td>0</td>
+                                        <td>2 min ago</td>
+                                        <td><button class="btn btn-boderless">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6ZM10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12ZM10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18Z" fill="#4A4A4A"/>
+                                            </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-fist-row">Acme Ins. Co.</td>
+                                        <td class="text-success">0 hours</td>
+                                        <td class="text-success">0.01%</td>
+                                        <td>0</td>
+                                        <td>2 min ago</td>
+                                        <td><button class="btn btn-boderless">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6ZM10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12ZM10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18Z" fill="#4A4A4A"/>
+                                            </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-fist-row">Acme Ins. Co.</td>
+                                        <td class="text-success">0 hours</td>
+                                        <td class="text-success">0.01%</td>
+                                        <td>0</td>
+                                        <td>2 min ago</td>
+                                        <td><button class="btn btn-boderless">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6ZM10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12ZM10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18Z" fill="#4A4A4A"/>
+                                            </svg>
+                                            </button>
+                                        </td>
+                                    </tr> <tr>
+                                        <td class="table-fist-row">Acme Ins. Co.</td>
+                                        <td class="text-success">0 hours</td>
+                                        <td class="text-success">0.01%</td>
+                                        <td>0</td>
+                                        <td>2 min ago</td>
+                                        <td><button class="btn btn-boderless">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6ZM10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12ZM10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18Z" fill="#4A4A4A"/>
+                                            </svg>
+                                            </button>
+                                        </td>
+                                    </tr> <tr>
+                                        <td class="table-fist-row">Acme Ins. Co.</td>
+                                        <td class="text-success">0 hours</td>
+                                        <td class="text-success">0.01%</td>
+                                        <td>0</td>
+                                        <td>2 min ago</td>
+                                        <td><button class="btn btn-boderless">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10 6C9.46957 6 8.96086 5.78929 8.58579 5.41421C8.21071 5.03914 8 4.53043 8 4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2C10.5304 2 11.0391 2.21071 11.4142 2.58579C11.7893 2.96086 12 3.46957 12 4C12 4.53043 11.7893 5.03914 11.4142 5.41421C11.0391 5.78929 10.5304 6 10 6ZM10 12C9.46957 12 8.96086 11.7893 8.58579 11.4142C8.21071 11.0391 8 10.5304 8 10C8 9.46957 8.21071 8.96086 8.58579 8.58579C8.96086 8.21071 9.46957 8 10 8C10.5304 8 11.0391 8.21071 11.4142 8.58579C11.7893 8.96086 12 9.46957 12 10C12 10.5304 11.7893 11.0391 11.4142 11.4142C11.0391 11.7893 10.5304 12 10 12ZM10 18C9.46957 18 8.96086 17.7893 8.58579 17.4142C8.21071 17.0391 8 16.5304 8 16C8 15.4696 8.21071 14.9609 8.58579 14.5858C8.96086 14.2107 9.46957 14 10 14C10.5304 14 11.0391 14.2107 11.4142 14.5858C11.7893 14.9609 12 15.4696 12 16C12 16.5304 11.7893 17.0391 11.4142 17.4142C11.0391 17.7893 10.5304 18 10 18Z" fill="#4A4A4A"/>
+                                            </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <!-- PAGINATION -->
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+
+
+                        <div class="card-area ">
+                            <h4 class="mb-16">Reconciliation Heatmap</h4>
+
+                            <div class="table-responsive">
+                                <table class="table heatmap-table table-borderless  align-middle">
+                                    <thead class="">
+                                    <tr>
+                                        <th>Partner</th>
+                                        <th>Mon</th>
+                                        <th>Tue</th>
+                                        <th>Wed</th>
+                                        <th>Thu</th>
+                                        <th>Fri</th>
+                                        <th>Sat</th>
+                                        <th>Sun</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Alpha</td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Beta</td>
+                                        <td><span class="heat-cell hm-yellow"></span></td>
+                                        <td><span class="heat-cell hm-red"></span></td>
+                                        <td><span class="heat-cell hm-red"></span></td>
+                                        <td><span class="heat-cell hm-yellow"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Gamma</td>
+                                        <td><span class="heat-cell hm-red"></span></td>
+                                        <td><span class="heat-cell hm-red"></span></td>
+                                        <td><span class="heat-cell hm-yellow"></span></td>
+                                        <td><span class="heat-cell hm-yellow"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Delta</td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gamma</td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gamma</td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                        <td><span class="heat-cell hm-green"></span></td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- .................................content end........................... -->
+
+    <!-- .................................leftsidebar........................... -->
+
+
+</div>
+<!-- .................................leftsidebar end ........................... -->
+
+
+
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"
+></script>
+<!-- <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+  crossorigin="anonymous"
+></script> -->
+</body>
+</html>

@@ -311,15 +311,15 @@
                             <div class="col-md-10">
                                 <h5 class="mb-0 fw-semibold">Webhook & API Health</h5>
                                 <div class="row align-items-center ">
-                                    <div class="" style="width: 12%">
+                                    <div class="Success-Rate" style="">
                                         <small class="fw-medium">Success Rate</small>
 
                                     </div>
-                                    <div class="" style="width: 88%">
-                                        <div class="progress" style="height: 14px; border-radius: 10px;">
+                                    <div class="progress-width" style="">
+                                        <div class="progress" style="">
 
                                             <div class="progress-bar bg-success" role="progressbar"
-                                                 style="width: 98.2%; border-radius: 10px;"
+                                                 style="width: 90.2%; border-radius: 10px;"
                                                  aria-valuenow="98.2" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
@@ -432,7 +432,11 @@
 
         series: [{
             data: [5800, 3200, 4900, 1600]
-        }],
+        }]
+        ,
+        legend: {
+            show: false
+        },
 
         xaxis: {
             categories: ['Direct API', 'Web Portal', 'Mobile App', 'Legacy System'],

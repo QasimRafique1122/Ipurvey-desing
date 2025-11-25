@@ -93,20 +93,40 @@
     <div class="content ">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
-                <div class="header-navnbar">
-                    <button class="btn px-1 py-0 me-16 open-btn">
-                        <i class="fal fa-stream"></i>
-                    </button>
 
-                    <img src="assets/Images/profile.png" alt="profile">
-                    <h1 class="profile-name">John Adam</h1>
+                <div class="header-navnbar d-flex justify-content-between align-items-center w-100">
+
+                    <!-- Left Side -->
+                    <div class="d-flex pro align-items-center">
+                        <button class="btn px-1 py-0 me-3 open-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25"
+                                      stroke="#0F172A" stroke-width="1.5"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <div class="d-flex align-items-center">
+                            <img src="assets/Images/profile.png" alt="profile" class="me-2">
+                            <div class="d-none d-md-block">
+                                <h1 class="profile-name mb-0">John Adam</h1>
+                                <p class="user-welcome mb-0">Welcome back to your policy center.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side -->
+                    <div class="d-flex  align-items-center">
+                       <div class="Wallet-text "> <p class="mb-0 me-2">Wallet Balance</p>
+                           <h2 class="text-success mb-0 me-2">$45.00</h2></div>
+                        <span class="user-name">S</span>
+                    </div>
+
                 </div>
-
-
-                <!-- ...............rigth side icon button. -->
 
             </div>
         </nav>
+
         <div class="container p-16">
             <div class="dashboard-content  ">
                 <h3 class="welcome-heading">Overview</h3>
@@ -163,14 +183,15 @@
                     <div class="timeline-icon bg-success">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
                             <path d="M15 5V3C15 2.46957 14.7893 1.96086 14.4142 1.58579C14.0391 1.21071 13.5304 1 13 1H3C2.46957 1 1.96086 1.21071 1.58579 1.58579C1.21071 1.96086 1 2.46957 1 3V9C1 9.53043 1.21071 10.0391 1.58579 10.4142C1.96086 10.7893 2.46957 11 3 11H5M7 6L11 4M15 6L11 8M11 8V14M11 8H11.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                    </div>
+                        </svg>
+                    </div>
 
                     <div class="timeline-content w-100">
                         <div class="d-flex justify-content-between">
                             <h6 class=" timeline-toggle" data-bs-toggle="collapse" data-bs-target="#item1">
                                 Payout Finalized for Claim #P8934
                             </h6>
-                            <small class="text-muted">4 days ago</small>
+                            <small class="timeline-toggle-parag">4 days ago</small>
                         </div>
 
                         <p class="timeline-toggle-parag">
@@ -215,7 +236,7 @@
                             <h6 class="timeline-toggle" data-bs-toggle="collapse" data-bs-target="#item2">
                                 Claim Filed: Delayed Luggage
                             </h6>
-                            <small class="text-muted">1 week ago</small>
+                            <small class="timeline-toggle-parag">1 week ago</small>
                         </div>
 
                         <p class="timeline-toggle-parag">
@@ -266,7 +287,7 @@
                             <h6 class=" timeline-toggle" data-bs-toggle="collapse" data-bs-target="#item3">
                                 Travel Policy #TRV2025 Activated
                             </h6>
-                            <small class="text-muted">2 weeks ago</small>
+                            <small class="timeline-toggle-parag">2 weeks ago</small>
                         </div>
 
                         <p class="timeline-toggle-parag">
@@ -352,8 +373,8 @@
                         Dispute Payout / Claim
                     </button>
 
-                    <div class="d-flex align-items-center gap-3">
-                        <span class="text-muted">Download Statement</span>
+                    <div class="d-flex mt-16 align-items-center gap-3 gap-md-2">
+                        <span class="timeline-toggle-parag">Download Statement</span>
                         <button class="btn btn-primary btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M2 11V12.5C2 13.3284 2.67157 14 3.5 14H12.5C13.3284 14 14 13.3284 14 12.5V11M11 8L8 11M8 11L5 8M8 11V2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg> PDF</button>
