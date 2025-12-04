@@ -223,9 +223,59 @@ h1, h2, h3, h4, h5 {
 .content {
   margin-left: 230px; /* Ensure content doesn't overlap the sidebar */
   width: calc(100% - 230px); /* Adjust width based on sidebar */
+    transition: all 0.3s;
+
 }
 
 
+/* Collapsed (desktop) state */
+#side_nav.sidebar-collapsed {
+    min-width: 70px;
+    max-width: 70px;
+}
+
+/* Adjust content when sidebar is collapsed */
+.content.sidebar-collapsed {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+/* Hide text and some decorations when collapsed */
+#side_nav.sidebar-collapsed .link-text,
+#side_nav.sidebar-collapsed .dropdown-arrow,
+#side_nav.sidebar-collapsed .inner-link
+{
+    display: none;
+}
+#side_nav.sidebar-collapsed .spa-bord{
+
+}
+/* Center icons in collapsed mode */
+#side_nav.sidebar-collapsed .nav-side-link,
+#side_nav.sidebar-collapsed .inner-link {
+    justify-content: center;
+}
+
+/* Remove left gap for icons when collapsed */
+#side_nav.sidebar-collapsed .nav-side-link .icon {
+    margin-right: 0;
+}
+
+/* Default: show big logo, hide small logo */
+.logo-small {
+    display: none;
+}
+
+/* When sidebar is collapsed: hide big, show small */
+#side_nav.sidebar-collapsed .logo-large {
+    display: none;
+}
+
+#side_nav.sidebar-collapsed .logo-small {
+    display: block;
+    width: 22px;
+    height: 32px;
+}
 
 .table-height{
     max-height: 150px;
@@ -281,6 +331,8 @@ border-radius: 12px;
 
 .logo-img {
     max-width: 118px;
+    height: 32px;
+
 }
 
 .close-btn {
@@ -1842,6 +1894,7 @@ margin-top: 24px;
 
 }
 .mobile-navbar-fixed{
+    z-index: 1;
     height: 92px;
     border-radius: 24px 24px 8px 8px;
     border-right: 1px solid var(--Border, #E5E7EB);
@@ -2165,7 +2218,7 @@ margin-top: 24px;
         max-width: 206px !important;;
     }
     #side_nav.active {
-        z-index: 2;
+        z-index: 3;
         margin-left: 0;
     }
     .content {

@@ -2,38 +2,32 @@ $(".sidebar ul li").on('click', function () {
             $(".sidebar ul li.active").removeClass('active');
             $(this).addClass('active');
         });
-        //
-        // $('.open-btn').on('click', function () {
-        //     $('.sidebar').addClass('active');
-        //
-        // });
-        //
-        //
-        // $('.close-btn').on('click', function () {
-        //     $('.sidebar').removeClass('active');
-        //
-        // })
-        //
-        //
-        // $('.toggleRigthBar-btn').on('click', function () {
-        //     // Toggle the sidebar visibility
-        //
-        //     // Toggle the button's appearance (open/close icons and text)
-        //     $('.open-text, .close-text').toggle(); // This will switch between "open" and "close" text/icons
-        // });
-// ....................
 
 
 
 // Mobile sidebar toggle
-document.getElementById('mobileToggle').addEventListener('click', function () {
-    document.getElementById('side_nav').classList.toggle('active');
+const sidebar = document.getElementById('side_nav');
+const content = document.querySelector('.content');
+
+// Handle both desktop and mobile toggle buttons
+document.querySelectorAll('.mobile-toggle').forEach(btn => {
+    btn.addEventListener('click', function () {
+        // Mobile: open/close sidebar (slide in/out)
+        if (window.innerWidth < 768) {
+            sidebar.classList.toggle('active');
+        }
+        // Desktop: collapse/expand width (icons only)
+        else {
+            sidebar.classList.toggle('sidebar-collapsed');
+            content.classList.toggle('sidebar-collapsed');
+        }
+    });
 });
 
+// Close button (used for mobile)
 document.getElementById('closeSidebar').addEventListener('click', function () {
-    document.getElementById('side_nav').classList.remove('active');
+    sidebar.classList.remove('active');
 });
-
 // Active link highlighting
 document.querySelectorAll('.nav-side-link, .inner-link').forEach(link => {
     link.addEventListener('click', function (e) {
