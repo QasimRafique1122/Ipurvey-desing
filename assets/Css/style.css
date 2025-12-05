@@ -1687,6 +1687,7 @@ margin-top: 16px;
 
 .login-logo{
     padding-bottom: 68px;
+        max-width: 118px;
 }
 
 .login-wrapper {
